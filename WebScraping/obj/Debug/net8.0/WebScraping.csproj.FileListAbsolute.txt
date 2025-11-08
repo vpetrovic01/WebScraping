@@ -15,3 +15,4 @@ C:\Users\vpetr\source\repos\WebScraping\WebScraping\obj\Debug\net8.0\ref\WebScra
 C:\Users\vpetr\source\repos\WebScraping\WebScraping\bin\Debug\net8.0\HtmlAgilityPack.dll
 C:\Users\vpetr\source\repos\WebScraping\WebScraping\obj\Debug\net8.0\WebScraping.csproj.AssemblyReference.cache
 C:\Users\vpetr\source\repos\WebScraping\WebScraping\obj\Debug\net8.0\WebScrap.785AED5D.Up2Date
+C:\Users\vpetr\source\repos\WebScraping\WebScraping\obj\Debug\net8.0\WebScraping.sourcelink.json
