@@ -11,15 +11,34 @@ namespace WebScraping.Services
     {
         public static void Write(string filePath, List<AssetCategory> assets)
         {
-            var sb = new StringBuilder();
-
-            sb.AppendLine("LastUpdate,AssetName,AssetId,TotalNetGeneration");
-
-            foreach (var asset in assets)
+            try
             {
-                sb.AppendLine($"\"{asset.LastUpdate}\",\"{asset.CategoryName} - {asset.AssetName}\",\"{asset.AssetId}\",\"{asset.TotalNetGeneration}\"");
+                if (assets == null || assets.Count == 0)
+                {
+                    Console.WriteLine("[CsvWriter] No assets to write");
+                    return;
+                }
+
+                var sb = new StringBuilder();
+
+                sb.AppendLine("LastUpdate,AssetName,AssetId,TotalNetGeneration");
+
+                foreach (var asset in assets)
+                {
+                    sb.AppendLine($"\"{asset.LastUpdate}\",\"{asset.CategoryName} - {asset.AssetName}\",\"{asset.AssetId}\",\"{asset.TotalNetGeneration}\"");
+                }
+                File.WriteAllText(filePath, sb.ToString());
+                Console.WriteLine($"CSV created: {filePath}");
             }
-            File.WriteAllText(filePath, sb.ToString());
+            catch (IOException ex)
+            {
+                Console.WriteLine($"[CsvWriter] File write failed: {ex.Message}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[CsvWriter] Unexpected error: {ex.Message}");
+            }
+
         }
     }
 }

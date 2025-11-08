@@ -14,30 +14,32 @@ namespace WebScraping.Services
     {
         public static List<AssetCategory> Parse(string html, string category)
         {
-            var doc = new HtmlDocument();
-            doc.LoadHtml(html);
-
-            var lastUpdate = GetLastUpdate(doc);
-            if (lastUpdate == null)
+            var assets = new List<AssetCategory>();
+            try
             {
+                var doc = new HtmlDocument();
+                doc.LoadHtml(html);
 
-                return new List<AssetCategory>();
+                var lastUpdate = GetLastUpdate(doc);
+                if (lastUpdate == null)
+                {
+
+                    return new List<AssetCategory>();
+                }
+
+                var table = GetTableByCategory(doc, category);
+                if (table == null)
+                {
+                    return new List<AssetCategory>();
+                }
+
+                return ParseRows(table, category, lastUpdate);
             }
-
-            var table = GetTableByCategory(doc, category);
-            if (table == null)
+            catch (Exception ex)
             {
-                return new List<AssetCategory>();
+                Console.WriteLine($"[TableParser] Failed to parse table: {ex.Message}");
+                return assets;
             }
-
-            var rows = table.SelectNodes(".//tr");
-
-            if (rows == null || rows.Count < 3)
-            {
-                return new List<AssetCategory>();
-            }
-
-            return ParseRows(table, category, lastUpdate);
         }
 
         private static string? GetLastUpdate(HtmlDocument doc)
@@ -68,25 +70,33 @@ namespace WebScraping.Services
             {
                 return assets;
             }
+
             foreach (var row in rows.Skip(2))
             {
-                var cells = row.SelectNodes(".//td");
-                if (cells == null || cells.Count < 3) { continue; }
-
-                string assetText = cells[0].InnerText.Trim();
-                string tng = cells[1].InnerText.Trim();
-
-                var parsed = ParseAssetText(assetText);
-                if (parsed == null) { continue; }
-
-                assets.Add(new AssetCategory
+                try
                 {
-                    LastUpdate = lastUpdate,
-                    CategoryName = category.ToUpper(),
-                    AssetName = parsed.Value.AssetName,
-                    AssetId = parsed.Value.AssetId,
-                    TotalNetGeneration = tng
-                });
+                    var cells = row.SelectNodes(".//td");
+                    if (cells == null || cells.Count < 3) { continue; }
+
+                    string assetText = cells[0].InnerText.Trim();
+                    string tng = cells[1].InnerText.Trim();
+
+                    var parsed = ParseAssetText(assetText);
+                    if (parsed == null) { continue; }
+
+                    assets.Add(new AssetCategory
+                    {
+                        LastUpdate = lastUpdate,
+                        CategoryName = category.ToUpper(),
+                        AssetName = parsed.Value.AssetName,
+                        AssetId = parsed.Value.AssetId,
+                        TotalNetGeneration = tng
+                    });
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"[TableParser] Failed to parse row: {ex.Message}");
+                }
             }
 
             return assets;

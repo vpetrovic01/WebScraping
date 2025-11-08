@@ -10,8 +10,21 @@ namespace WebScraping.Services
     {
         public static async Task<string> FetchHtml(string url)
         {
-            using var client = new HttpClient();
-            return await client.GetStringAsync(url);
+            try
+            {
+                using var client = new HttpClient();
+                return await client.GetStringAsync(url);
+            }
+            catch (HttpRequestException ex)
+            {
+                Console.WriteLine($"[HtmlFetcher] Web request failed: {ex.Message}");
+                return "";
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[HtmlFetcher] Unexpected error: {ex.Message}");
+                return "";
+            }
         }
     }
 }

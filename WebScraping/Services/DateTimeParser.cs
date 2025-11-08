@@ -11,11 +11,17 @@ namespace WebScraping.Services
     {
         public static string ParseLastUpdateDate(List<AssetCategory> assets)
         {
-            var lastUpdate = assets[2].LastUpdate;
+
+            if (assets == null || assets.Count == 0)
+            {
+                throw new ArgumentException("[DateTimeParser] Asset list is empty");
+            }
+
+            var lastUpdate = assets.First().LastUpdate;
 
             string timestamp;
 
-            string[] formats = { "'Last Update :' MMM dd, yyyy HH:mm", "MMM dd, yyyy HH:mm" };
+            string formats = "'Last Update :' MMM dd, yyyy HH:mm";
 
             if (DateTime.TryParseExact(lastUpdate, formats, System.Globalization.CultureInfo.InvariantCulture,
                 System.Globalization.DateTimeStyles.None,
@@ -26,7 +32,7 @@ namespace WebScraping.Services
             }
             else
             {
-                timestamp = DateTime.Now.ToString("yyyyMMdd_HHmmss");
+                timestamp = DateTime.Now.ToString("yyyyMMdd_HHmm");
             }
 
             return timestamp;

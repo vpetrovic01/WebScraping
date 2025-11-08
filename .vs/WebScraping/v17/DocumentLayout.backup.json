@@ -3,28 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\vpetr\\source\\repos\\WebScraping\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EC27C779-D9CF-4EEB-80D3-C3973F421E10}|WebScraping\\WebScraping.csproj|c:\\users\\vpetr\\source\\repos\\webscraping\\webscraping\\services\\tableparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC27C779-D9CF-4EEB-80D3-C3973F421E10}|WebScraping\\WebScraping.csproj|solutionrelative:webscraping\\services\\tableparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC27C779-D9CF-4EEB-80D3-C3973F421E10}|WebScraping\\WebScraping.csproj|c:\\users\\vpetr\\source\\repos\\webscraping\\webscraping\\services\\datetimeparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC27C779-D9CF-4EEB-80D3-C3973F421E10}|WebScraping\\WebScraping.csproj|solutionrelative:webscraping\\services\\datetimeparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EC27C779-D9CF-4EEB-80D3-C3973F421E10}|WebScraping\\WebScraping.csproj|c:\\users\\vpetr\\source\\repos\\webscraping\\webscraping\\services\\csvwriter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC27C779-D9CF-4EEB-80D3-C3973F421E10}|WebScraping\\WebScraping.csproj|solutionrelative:webscraping\\services\\csvwriter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EC27C779-D9CF-4EEB-80D3-C3973F421E10}|WebScraping\\WebScraping.csproj|c:\\users\\vpetr\\source\\repos\\webscraping\\webscraping\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EC27C779-D9CF-4EEB-80D3-C3973F421E10}|WebScraping\\WebScraping.csproj|solutionrelative:webscraping\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC27C779-D9CF-4EEB-80D3-C3973F421E10}|WebScraping\\WebScraping.csproj|c:\\users\\vpetr\\source\\repos\\webscraping\\webscraping\\models\\assetcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC27C779-D9CF-4EEB-80D3-C3973F421E10}|WebScraping\\WebScraping.csproj|solutionrelative:webscraping\\models\\assetcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC27C779-D9CF-4EEB-80D3-C3973F421E10}|WebScraping\\WebScraping.csproj|c:\\users\\vpetr\\source\\repos\\webscraping\\webscraping\\services\\csvwriter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC27C779-D9CF-4EEB-80D3-C3973F421E10}|WebScraping\\WebScraping.csproj|solutionrelative:webscraping\\services\\csvwriter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EC27C779-D9CF-4EEB-80D3-C3973F421E10}|WebScraping\\WebScraping.csproj|c:\\users\\vpetr\\source\\repos\\webscraping\\webscraping\\services\\htmlfetcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EC27C779-D9CF-4EEB-80D3-C3973F421E10}|WebScraping\\WebScraping.csproj|solutionrelative:webscraping\\services\\htmlfetcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC27C779-D9CF-4EEB-80D3-C3973F421E10}|WebScraping\\WebScraping.csproj|c:\\users\\vpetr\\source\\repos\\webscraping\\webscraping\\services\\datetimeparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC27C779-D9CF-4EEB-80D3-C3973F421E10}|WebScraping\\WebScraping.csproj|solutionrelative:webscraping\\services\\datetimeparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC27C779-D9CF-4EEB-80D3-C3973F421E10}|WebScraping\\WebScraping.csproj|c:\\users\\vpetr\\source\\repos\\webscraping\\webscraping\\services\\tableparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC27C779-D9CF-4EEB-80D3-C3973F421E10}|WebScraping\\WebScraping.csproj|solutionrelative:webscraping\\services\\tableparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,82 +30,69 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DateTimeParser.cs",
-              "DocumentMoniker": "C:\\Users\\vpetr\\source\\repos\\WebScraping\\WebScraping\\Services\\DateTimeParser.cs",
-              "RelativeDocumentMoniker": "WebScraping\\Services\\DateTimeParser.cs",
-              "ToolTip": "C:\\Users\\vpetr\\source\\repos\\WebScraping\\WebScraping\\Services\\DateTimeParser.cs",
-              "RelativeToolTip": "WebScraping\\Services\\DateTimeParser.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAswB4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T19:33:05.163Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "CsvWriter.cs",
               "DocumentMoniker": "C:\\Users\\vpetr\\source\\repos\\WebScraping\\WebScraping\\Services\\CsvWriter.cs",
               "RelativeDocumentMoniker": "WebScraping\\Services\\CsvWriter.cs",
               "ToolTip": "C:\\Users\\vpetr\\source\\repos\\WebScraping\\WebScraping\\Services\\CsvWriter.cs",
               "RelativeToolTip": "WebScraping\\Services\\CsvWriter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAswA8AAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T13:16:20.762Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TableParser.cs",
-              "DocumentMoniker": "C:\\Users\\vpetr\\source\\repos\\WebScraping\\WebScraping\\Services\\TableParser.cs",
-              "RelativeDocumentMoniker": "WebScraping\\Services\\TableParser.cs",
-              "ToolTip": "C:\\Users\\vpetr\\source\\repos\\WebScraping\\WebScraping\\Services\\TableParser.cs",
-              "RelativeToolTip": "WebScraping\\Services\\TableParser.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAA3wDoAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T12:43:33.015Z",
+              "WhenOpened": "2025-11-08T23:02:41.735Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "AssetCategory.cs",
-              "DocumentMoniker": "C:\\Users\\vpetr\\source\\repos\\WebScraping\\WebScraping\\Models\\AssetCategory.cs",
-              "RelativeDocumentMoniker": "WebScraping\\Models\\AssetCategory.cs",
-              "ToolTip": "C:\\Users\\vpetr\\source\\repos\\WebScraping\\WebScraping\\Models\\AssetCategory.cs",
-              "RelativeToolTip": "WebScraping\\Models\\AssetCategory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Title": "DateTimeParser.cs",
+              "DocumentMoniker": "C:\\Users\\vpetr\\source\\repos\\WebScraping\\WebScraping\\Services\\DateTimeParser.cs",
+              "RelativeDocumentMoniker": "WebScraping\\Services\\DateTimeParser.cs",
+              "ToolTip": "C:\\Users\\vpetr\\source\\repos\\WebScraping\\WebScraping\\Services\\DateTimeParser.cs",
+              "RelativeToolTip": "WebScraping\\Services\\DateTimeParser.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAuwA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T12:38:52.018Z",
+              "WhenOpened": "2025-11-08T21:18:46.42Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "HtmlFetcher.cs",
-              "DocumentMoniker": "C:\\Users\\vpetr\\source\\repos\\WebScraping\\WebScraping\\Services\\HtmlFetcher.cs",
-              "RelativeDocumentMoniker": "WebScraping\\Services\\HtmlFetcher.cs",
-              "ToolTip": "C:\\Users\\vpetr\\source\\repos\\WebScraping\\WebScraping\\Services\\HtmlFetcher.cs",
-              "RelativeToolTip": "WebScraping\\Services\\HtmlFetcher.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAqAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "TableParser.cs",
+              "DocumentMoniker": "C:\\Users\\vpetr\\source\\repos\\WebScraping\\WebScraping\\Services\\TableParser.cs",
+              "RelativeDocumentMoniker": "WebScraping\\Services\\TableParser.cs",
+              "ToolTip": "C:\\Users\\vpetr\\source\\repos\\WebScraping\\WebScraping\\Services\\TableParser.cs",
+              "RelativeToolTip": "WebScraping\\Services\\TableParser.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAowDcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T11:56:18.396Z",
+              "WhenOpened": "2025-11-08T21:18:43.971Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "HtmlFetcher.cs",
+              "DocumentMoniker": "C:\\Users\\vpetr\\source\\repos\\WebScraping\\WebScraping\\Services\\HtmlFetcher.cs",
+              "RelativeDocumentMoniker": "WebScraping\\Services\\HtmlFetcher.cs",
+              "ToolTip": "C:\\Users\\vpetr\\source\\repos\\WebScraping\\WebScraping\\Services\\HtmlFetcher.cs",
+              "RelativeToolTip": "WebScraping\\Services\\HtmlFetcher.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABkAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T21:18:43.323Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\vpetr\\source\\repos\\WebScraping\\WebScraping\\Program.cs",
               "RelativeDocumentMoniker": "WebScraping\\Program.cs",
               "ToolTip": "C:\\Users\\vpetr\\source\\repos\\WebScraping\\WebScraping\\Program.cs",
               "RelativeToolTip": "WebScraping\\Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAABDAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwB8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-06T13:23:19.623Z",
               "EditorCaption": ""
