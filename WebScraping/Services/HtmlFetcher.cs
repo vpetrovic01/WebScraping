@@ -8,7 +8,7 @@ namespace WebScraping.Services
 {
     internal class HtmlFetcher
     {
-        public static async Task<string> fetchHtml(string url)
+        public static async Task<string> FetchHtml(string url)
         {
             using var client = new HttpClient();
             return await client.GetStringAsync(url);

@@ -9,18 +9,22 @@ class Program
     static async Task Main()
     {
         var url = "http://ets.aeso.ca/ets_web/ip/Market/Reports/CSDReportServlet";
-        string html = await HtmlFetcher.fetchHtml(url);
+        string html = await HtmlFetcher.FetchHtml(url);
 
-        var assets = TableParser.Parse(html, "wind");
+        var tableName = "Wind";
 
-        if (assets == null)
+        var assets = TableParser.Parse(html, tableName);
+
+        if (assets == null || assets.Count == 0)
         {
             Console.WriteLine("No assets found");
             return;
         }
 
-        string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "data.csv");
+        string timestamp = DateTimeParser.ParseLastUpdateDate(assets);
+        string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, $"{tableName}_data_{timestamp}.csv");
         CsvWriter.Write(filePath, assets);
+
         Console.WriteLine($"CSV created: {filePath}");
 
     }

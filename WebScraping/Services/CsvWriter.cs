@@ -11,15 +11,15 @@ namespace WebScraping.Services
     {
         public static void Write(string filePath, List<AssetCategory> assets)
         {
+            var sb = new StringBuilder();
 
-            using var writer = new StreamWriter(filePath);
-            writer.WriteLine("LastUpdate, AssetName, AssetId, TotalNetGeneration");
+            sb.AppendLine("LastUpdate,AssetName,AssetId,TotalNetGeneration");
 
             foreach (var asset in assets)
             {
-                writer.WriteLine($"\"{asset.LastUpdate}\",\"{asset.CategoryName} - {asset.AssetName}\",\"{asset.AssetId}\",\"{asset.TotalNetGeneration}\"");
+                sb.AppendLine($"\"{asset.LastUpdate}\",\"{asset.CategoryName} - {asset.AssetName}\",\"{asset.AssetId}\",\"{asset.TotalNetGeneration}\"");
             }
-
+            File.WriteAllText(filePath, sb.ToString());
         }
     }
 }
