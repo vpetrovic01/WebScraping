@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WebScraping.Models
 {
-    internal class AssetCategory
+    public class AssetCategory
     {
         public string LastUpdate { get; set; } = string.Empty;
         public string CategoryName { get; set; } = string.Empty;
