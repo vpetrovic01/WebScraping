@@ -17,27 +17,30 @@ namespace WebScraping.Services
             var assets = new List<AssetCategory>();
             try
             {
+                Logger.Info($"[TableParser] Parsing table for category '{category}'");
                 var doc = new HtmlDocument();
                 doc.LoadHtml(html);
 
                 var lastUpdate = GetLastUpdate(doc);
                 if (lastUpdate == null)
                 {
-
+                    Logger.Error("[TableParser] Cannot find lastUpdate field");
                     return new List<AssetCategory>();
                 }
 
                 var table = GetTableByCategory(doc, category);
                 if (table == null)
                 {
+                    Logger.Error($"[TableParser] Cannot find table for category '{category}'");
                     return new List<AssetCategory>();
                 }
-
-                return ParseRows(table, category, lastUpdate);
+                assets = ParseRows(table, category, lastUpdate);
+                Logger.Info($"[TableParser] Parsed {assets.Count} assets from category '{category}'");
+                return assets;
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"[TableParser] Failed to parse table: {ex.Message}");
+                Logger.Error($"[TableParser] Failed to parse table: {ex.Message}");
                 return assets;
             }
         }
@@ -68,7 +71,8 @@ namespace WebScraping.Services
 
             if (rows == null || rows.Count < 3)
             {
-                return assets;
+                Logger.Error($"[TableParser] Table for category '{category}' has insufficient rows or is missing.");
+                throw new Exception();
             }
 
             foreach (var row in rows.Skip(2))
@@ -76,13 +80,21 @@ namespace WebScraping.Services
                 try
                 {
                     var cells = row.SelectNodes(".//td");
-                    if (cells == null || cells.Count < 3) { continue; }
+                    if (cells == null || cells.Count < 3)
+                    {
+                        Logger.Error($"[TableParser] Table for category '{category}' has insufficient columns or is missing.");
+                        continue;
+                    }
 
                     string assetText = cells[0].InnerText.Trim();
                     string tng = cells[1].InnerText.Trim();
 
                     var parsed = ParseAssetText(assetText);
-                    if (parsed == null) { continue; }
+                    if (parsed == null)
+                    {
+                        Logger.Error("[TableParser] Unable to parse assetName and assetId.");
+                        continue;
+                    }
 
                     assets.Add(new AssetCategory
                     {
@@ -95,7 +107,7 @@ namespace WebScraping.Services
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"[TableParser] Failed to parse row: {ex.Message}");
+                    Logger.Error($"[TableParser] Failed to parse row: '{row.InnerText.Trim()}'. {ex.Message}");
                 }
             }
 

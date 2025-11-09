@@ -12,17 +12,20 @@ namespace WebScraping.Services
         {
             try
             {
+                Logger.Info($"[HtmlFetcher] Fetching HTML from {url}");
                 using var client = new HttpClient();
-                return await client.GetStringAsync(url);
+                string html = await client.GetStringAsync(url);
+                Logger.Info($"[HtmlFetcher] Successfully fetched HTML");
+                return html;
             }
             catch (HttpRequestException ex)
             {
-                Console.WriteLine($"[HtmlFetcher] Web request failed: {ex.Message}");
+                Logger.Error($"[HtmlFetcher] Web request failed: {ex.Message}");
                 return "";
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"[HtmlFetcher] Unexpected error: {ex.Message}");
+                Logger.Error($"[HtmlFetcher] Unexpected error: {ex.Message}");
                 return "";
             }
         }

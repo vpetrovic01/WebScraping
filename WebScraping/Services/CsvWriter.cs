@@ -13,9 +13,10 @@ namespace WebScraping.Services
         {
             try
             {
+                Logger.Info($"[CsvWriter] Writing data into csv file.");
                 if (assets == null || assets.Count == 0)
                 {
-                    Console.WriteLine("[CsvWriter] No assets to write");
+                    Logger.Error("[CsvWriter] No assets to write");
                     return;
                 }
 
@@ -28,15 +29,15 @@ namespace WebScraping.Services
                     sb.AppendLine($"\"{asset.LastUpdate}\",\"{asset.CategoryName} - {asset.AssetName}\",\"{asset.AssetId}\",\"{asset.TotalNetGeneration}\"");
                 }
                 File.WriteAllText(filePath, sb.ToString());
-                Console.WriteLine($"CSV created: {filePath}");
+                Logger.Info($"[CsvWriter] CSV created: {filePath}");
             }
             catch (IOException ex)
             {
-                Console.WriteLine($"[CsvWriter] File write failed: {ex.Message}");
+                Logger.Error($"[CsvWriter] File write failed: {ex.Message}");
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"[CsvWriter] Unexpected error: {ex.Message}");
+                Logger.Error($"[CsvWriter] Unexpected error: {ex.Message}");
             }
 
         }

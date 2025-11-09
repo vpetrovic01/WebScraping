@@ -11,7 +11,8 @@ namespace WebScraping.Services
     {
         public static string ParseLastUpdateDate(List<AssetCategory> assets)
         {
-
+            Logger.Info("[DateTimeParser] Parsing date and time");
+            
             if (assets == null || assets.Count == 0)
             {
                 throw new ArgumentException("[DateTimeParser] Asset list is empty");
@@ -32,9 +33,10 @@ namespace WebScraping.Services
             }
             else
             {
+                Logger.Warning($"[DateTimeParser] Failed to parse datetime from '{lastUpdate}', using current time.");
                 timestamp = DateTime.Now.ToString("yyyyMMdd_HHmm");
             }
-
+            Logger.Info("[DateTimeParser] Successfully parsed date and time.");
             return timestamp;
         }
     }
