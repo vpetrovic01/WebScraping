@@ -7,9 +7,9 @@ using WebScraping.Models;
 
 namespace WebScraping.Services
 {
-    internal class CsvWriter
+    public class CsvWriter
     {
-        public static void Write(string filePath, List<AssetCategory> assets)
+        public static bool TryWrite(string filePath, List<AssetCategory> assets)
         {
             try
             {
@@ -17,7 +17,7 @@ namespace WebScraping.Services
                 if (assets == null || assets.Count == 0)
                 {
                     Logger.Error("[CsvWriter] No assets to write");
-                    return;
+                    return false;
                 }
 
                 var sb = new StringBuilder();
@@ -30,14 +30,17 @@ namespace WebScraping.Services
                 }
                 File.WriteAllText(filePath, sb.ToString());
                 Logger.Info($"[CsvWriter] CSV created: {filePath}");
+                return true;
             }
             catch (IOException ex)
             {
                 Logger.Error($"[CsvWriter] File write failed: {ex.Message}");
+                return false;
             }
             catch (Exception ex)
             {
                 Logger.Error($"[CsvWriter] Unexpected error: {ex.Message}");
+                return false;
             }
 
         }

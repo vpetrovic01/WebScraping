@@ -28,7 +28,7 @@ class Program
 
             string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, $"{tableName}_data_{timestamp}.csv");
             
-            CsvWriter.Write(filePath, assets);
+            CsvWriter.TryWrite(filePath, assets);
         }
         catch (Exception ex)
         {

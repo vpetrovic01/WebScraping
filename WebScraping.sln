@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36623.8 d17.14
+VisualStudioVersion = 17.14.36623.8
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebScraping", "WebScraping\WebScraping.csproj", "{EC27C779-D9CF-4EEB-80D3-C3973F421E10}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebScraping.Tests", "WebScraping.Tests\WebScraping.Tests.csproj", "{FF35C70E-B654-4DC1-8E9F-27EE8F001F1C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{EC27C779-D9CF-4EEB-80D3-C3973F421E10}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC27C779-D9CF-4EEB-80D3-C3973F421E10}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC27C779-D9CF-4EEB-80D3-C3973F421E10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF35C70E-B654-4DC1-8E9F-27EE8F001F1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF35C70E-B654-4DC1-8E9F-27EE8F001F1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF35C70E-B654-4DC1-8E9F-27EE8F001F1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF35C70E-B654-4DC1-8E9F-27EE8F001F1C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
