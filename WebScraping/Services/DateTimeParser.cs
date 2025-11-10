@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WebScraping.Models;
-
-namespace WebScraping.Services
+﻿namespace WebScraping.Services
 {
     public class DateTimeParser
     {

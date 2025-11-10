@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WebScraping.Services;
+﻿using WebScraping.Services;
 
 namespace WebScraping.Tests
 {
@@ -15,10 +10,10 @@ namespace WebScraping.Tests
         {
             //Arrange
             string url = "http://ets.aeso.ca/ets_web/ip/Market/Reports/CSDReportServlet";
-          
+
             //Act
             var html = await HtmlFetcher.FetchHtml(url);
-            
+
             //Asset
             Assert.False(string.IsNullOrEmpty(html));
         }
@@ -28,10 +23,10 @@ namespace WebScraping.Tests
         {
             //Arrange
             string url = "***";
-            
+
             //Act
             var html = await HtmlFetcher.FetchHtml(url);
-            
+
             //Asset
             Assert.Equal("", html);
         }

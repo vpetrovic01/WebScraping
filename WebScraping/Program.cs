@@ -1,9 +1,4 @@
-﻿using HtmlAgilityPack;
-using System;
-using System.Net.Http;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using WebScraping.Services;
+﻿using WebScraping.Services;
 class Program
 {
     static async Task Main()
@@ -27,7 +22,7 @@ class Program
             string timestamp = DateTimeParser.ParseLastUpdateDate(assets.First().LastUpdate);
 
             string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, $"{tableName}_data_{timestamp}.csv");
-            
+
             CsvWriter.TryWrite(filePath, assets);
         }
         catch (Exception ex)

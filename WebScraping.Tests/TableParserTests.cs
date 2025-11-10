@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WebScraping.Services;
+﻿using WebScraping.Services;
 
 namespace WebScraping.Tests
 {
@@ -81,7 +76,7 @@ namespace WebScraping.Tests
             var result = TableParser.Parse(NotEnoughRowsHtml, "Gas");
 
             //Assert
-            Assert.NotNull(result); 
+            Assert.NotNull(result);
         }
 
         [Fact]
