@@ -7,22 +7,20 @@ using WebScraping.Models;
 
 namespace WebScraping.Services
 {
-    internal class DateTimeParser
+    public class DateTimeParser
     {
-        public static string ParseLastUpdateDate(List<AssetCategory> assets)
+        public static string ParseLastUpdateDate(string lastUpdate)
         {
             Logger.Info("[DateTimeParser] Parsing date and time");
-            
-            if (assets == null || assets.Count == 0)
+
+            if (lastUpdate == null || lastUpdate == "")
             {
                 throw new ArgumentException("[DateTimeParser] Asset list is empty");
             }
 
-            var lastUpdate = assets.First().LastUpdate;
-
             string timestamp;
 
-            string formats = "'Last Update :' MMM dd, yyyy HH:mm";
+            string[] formats = { "'Last Update :' MMM dd, yyyy HH:mm", "Last Update: MMMM dd, yyyy HH:mm" };
 
             if (DateTime.TryParseExact(lastUpdate, formats, System.Globalization.CultureInfo.InvariantCulture,
                 System.Globalization.DateTimeStyles.None,

@@ -24,7 +24,7 @@ class Program
                 return;
             }
 
-            string timestamp = DateTimeParser.ParseLastUpdateDate(assets);
+            string timestamp = DateTimeParser.ParseLastUpdateDate(assets.First().LastUpdate);
 
             string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, $"{tableName}_data_{timestamp}.csv");
             

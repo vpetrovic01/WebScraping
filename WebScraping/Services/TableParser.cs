@@ -10,7 +10,7 @@ using WebScraping.Models;
 
 namespace WebScraping.Services
 {
-    internal class TableParser
+    public class TableParser
     {
         public static List<AssetCategory> Parse(string html, string category)
         {
@@ -34,6 +34,7 @@ namespace WebScraping.Services
                     Logger.Error($"[TableParser] Cannot find table for category '{category}'");
                     return new List<AssetCategory>();
                 }
+
                 assets = ParseRows(table, category, lastUpdate);
                 Logger.Info($"[TableParser] Parsed {assets.Count} assets from category '{category}'");
                 return assets;
@@ -87,7 +88,7 @@ namespace WebScraping.Services
                     }
 
                     string assetText = cells[0].InnerText.Trim();
-                    string tng = cells[1].InnerText.Trim();
+                    string tng = cells[2].InnerText.Trim();
 
                     var parsed = ParseAssetText(assetText);
                     if (parsed == null)

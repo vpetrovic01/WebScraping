@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WebScraping.Services
 {
-    internal class HtmlFetcher
+    public class HtmlFetcher
     {
         public static async Task<string> FetchHtml(string url)
         {
